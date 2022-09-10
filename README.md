@@ -1,6 +1,5 @@
-![Header](https://user-images.githubusercontent.com/65062119/188270844-0814b93a-b343-4d1f-810d-6f571172cad0.png)
+![Header](https://user-images.githubusercontent.com/65062119/189495513-bed67ec9-1d01-448d-8d74-b9aa54655956.png)
 <div align="center">
   <a href="#"><img src="https://user-images.githubusercontent.com/65062119/187359585-621c5637-6e39-4052-8451-d790f19006bf.png"></img></a>
 </div>
-<img src="https://user-images.githubusercontent.com/65062119/188270856-4d7bd3b0-fcd0-4351-ad06-59c542e1e248.png"></img>
-<img src="https://bstats.org/signatures/bukkit/EpicChatPRO.svg"><img/>
+![Reviews Section](https://user-images.githubusercontent.com/65062119/189495522-8904bc7f-647d-44be-a571-d05b504edc40.png)
