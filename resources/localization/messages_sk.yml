@@ -1,0 +1,145 @@
+# !-----------------------------------------------------------------------------------------------!
+#
+#   [WIKI]
+#    1) https://github.com/AdoNikeOFFICE/EpicChatPRO/wiki
+#
+#   [BASICS]
+#    1) To hide message, set it to [].
+#    2) For UNICODE CHARACTERS (smileys, symbols, ..), save the file in UTF-8 encoding.
+#    3) Color codes are supported with '&', '§', '{#hex}' or '#hex' (Hex colors are only supported from 1.16+ Minecraft version).
+#    ▪  Examples: "&cHello."; "{#756D0B}Hello".
+#    ▪  For hex colors I recommend using https://htmlcolorcodes.com/.
+#    ▪  For hex colors gradients I recommend using https://rgb.birdflop.com/.
+#
+# !-----------------------------------------------------------------------------------------------!
+
+# -------------------------------------------------------------------------------------------------
+# Commands messages
+# -------------------------------------------------------------------------------------------------
+Commands:
+  No_Console: "&7Tento príkaz nie je možné použiť v konzoli."
+  Invalid_Argument: "&7Nedostupný subcommand. Vykonaj &f/{label} &7pre pomoc."
+  Reload_Started: "&7Reloadovanie pluginu, prosím počkaj.."
+  Reload_Success: "&f{plugin_name} {plugin_version} &7bol reloadnutý."
+  Reload_Fail: "&7Reloadovanie zlyhalo! Pozri sa do konzole pre viac informácií. Error: &f{error}&7."
+  
+  Operate:
+    Toggled: "'&7Chatovací mode bol ' + (disabled ? '&azapnutý' : '&cvypnutý') + '&7.'" # Broadcast Message
+    Message: "&7Chat je vypnutý, nemôžeš ho používať."
+
+  Mute:
+    Toggled: "'&7Mute pre &f{0} &7bol ' + (enabled ? '&cvypnutý' : '&azapnutý') + (timeSet ? ' &7na &f{1}' : '') + '&7.'" # Broadcast Message
+    Muted: "'&7Bol si mutnutý' + (timeSet ? ' na &f{0}' : '') + '&7.'"
+    Unmuted: "&7Bol si unmutnutý! Hurá do opätovného písania."
+
+  Clear: # Broadcast Messages
+    Message:
+      - "{prefix} &8&m----------------------------------------"
+      - "{prefix}"
+      - "{prefix} &7Chat bol resetovaný"
+      - "{prefix} &7administrátorom &f{target_name}"
+      - "{prefix}"
+      - "{prefix} &8&m----------------------------------------"
+    Reason_Message:
+      - "{prefix} &8&m----------------------------------------"
+      - "{prefix}"
+      - "{prefix} &7Chat bol resetovaný"
+      - "{prefix} &7administrátorom &f{target_name}"
+      - "{prefix}"
+      - "{prefix} &cDôvod"
+      - "{prefix} &4{reason}"
+      - "{prefix}"
+      - "{prefix} &8&m----------------------------------------"
+
+  Broadcast:
+    Not_Valid: "&7Táto správa sa v settings.yml nenachádza."
+
+  Staff_Chat:
+    Toggled: "'&7Staff Chat bol ' + (!enabled ? '&azapnutý' : '&cvypnutý') + '&7.'"
+
+# -------------------------------------------------------------------------------------------------
+# Messages related to players
+# -------------------------------------------------------------------------------------------------
+Player:
+  Not_Online: "&7Užívateľ &f{player} &7nie je online na tomto serveri."
+  Yourself: "'&7Toto ' + (!hasMuteBypass ? '&fnemôžeš použiť na samého seba' : '&fnemôžeš použiť na tohto hráča') + '&7.'"
+
+# -------------------------------------------------------------------------------------------------
+# Messages related to filters
+# -------------------------------------------------------------------------------------------------
+Filter:
+  Message: "Nemôžeš písať nadávky/ip/url."
+
+# -------------------------------------------------------------------------------------------------
+# Tab_Complete messages
+# -------------------------------------------------------------------------------------------------
+Tab_Complete:
+  Message: "Tento príkaz neexistuje."
+
+# -------------------------------------------------------------------------------------------------
+# Tag related messages
+# -------------------------------------------------------------------------------------------------
+Tag:
+  Message: "Otvoril si Menu."
+  Menu:
+    Title: "EpicChatPRO // Tagy"
+    Name: "'&f{tag} ' + (picked ? '&8| &aZvolený' : '')"
+    Lore:
+      - " "
+      - "&7Klikni pre zvolenie tohto tagu."
+    Animated_Title: "Tag nastavený!"
+    Reset:
+      Name: "Resetuj Tag"
+      Animated_Title: "Tag resetovaný!"
+
+# -------------------------------------------------------------------------------------------------
+# Question related messages
+# -------------------------------------------------------------------------------------------------
+Question:
+  Guessed: "&f{0} &7uhádol odpoveď! &f({1})"
+  Inactive_Cancel: "Otázka bola neaktívna. Expirovala, počkajte si na ďalšiu!"
+
+# -------------------------------------------------------------------------------------------------
+# Menu related messages
+# -------------------------------------------------------------------------------------------------
+Menu:
+  Page_Previous: "&8<< &fStrana {page}"
+  Page_Next: "Strana {page} &8>>"
+  Page_First: "&7Prvá Strana"
+  Page_Last: "&7Posledná Strana"
+
+# -------------------------------------------------------------------------------------------------
+# Words for both singular and plural form. Separate these two forms with ", "
+# -------------------------------------------------------------------------------------------------
+Cases:
+  Second: sekunda, sekundy
+
+# -------------------------------------------------------------------------------------------------
+# Messages shown when player runs a command he lacks permission for
+# -------------------------------------------------------------------------------------------------
+No_Permission: "Nemáš dostatok práv na vykonanie tohto príkazu. &f({permission})"
+
+# -------------------------------------------------------------------------------------------------
+# What's the message, when player is muted?
+#
+# This message is supported with
+# ▪ Essentials,
+# ▪ CMI,
+# ▪ BanManager,
+# ▪ AdvancedBan,
+# ▪ LiteBans
+# -------------------------------------------------------------------------------------------------
+Muted: "Nemôžeš používať chat, ak si mutnutý."
+
+# -------------------------------------------------------------------------------------------------
+# What's the message, when player is muted?
+#
+# This message is supported with
+# ▪ AuthMe
+# -------------------------------------------------------------------------------------------------
+Not_Logged: "Nemôžeš používať chat, ak nie si prihlásený."
+
+# -------------------------------------------------------------------------------------------------
+# DO NOT EDIT. Otherwise it will corrupt your plugin installation!
+# -------------------------------------------------------------------------------------------------
+Version: 1

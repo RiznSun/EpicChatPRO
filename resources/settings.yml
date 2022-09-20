@@ -1,0 +1,582 @@
+# !-----------------------------------------------------------------------------------------------!
+#
+#   [WIKI]
+#    1) https://github.com/AdoNikeOFFICE/EpicChatPRO/wiki
+#
+#   [BASICS]
+#    1) To disable/hide message, set it to [] or "none".
+#    2) For UNICODE CHARACTERS (smileys, symbols, ..), save the file in UTF-8 encoding.
+#    3) You can use types in "Message" sections, see https://github.com/AdoNikeOFFICE/EpicChatPRO/wiki/Message-Types.
+#    4) Color codes are supported with '&', '§', '{#hex}' or '#hex' (Hex colors are only supported from 1.16+ Minecraft version).
+#    ▪  Examples: "&cHello."; "{#756D0B}Hello".
+#    ▪  For hex colors I recommend using https://htmlcolorcodes.com/.
+#    ▪  For hex colors gradients I recommend using https://rgb.birdflop.com/.
+#    5) PlaceholderAPI and Built-in placeholders are available, see https://github.com/AdoNikeOFFICE/EpicChatPRO/wiki/Placeholders.
+#
+# !-----------------------------------------------------------------------------------------------!
+
+# -------------------------------------------------------------------------------------------------
+# This is the prefix before the messages.
+# -------------------------------------------------------------------------------------------------
+Prefix: "&4&lEpicChat &8//&7"
+
+# -------------------------------------------------------------------------------------------------
+# This is the prefix before the messages in the console.
+# -------------------------------------------------------------------------------------------------
+Log_Prefix: "[EpicChat]"
+
+# -------------------------------------------------------------------------------------------------
+# What LANGUAGE do you want to use from the localization/messages_LANGUAGE.yml?
+#
+# Available: "en", "sk", you can also create your own, if you want!
+# -------------------------------------------------------------------------------------------------
+Locale: "en"
+
+# -------------------------------------------------------------------------------------------------
+# This is the Debug section, if you don't want to see specified notify messages,
+# you can set the Debug to: Debug: [], or remove specified notify message.
+# -------------------------------------------------------------------------------------------------
+Debug: [ "placeholderapi", "vault", "message-types" ]
+
+# -------------------------------------------------------------------------------------------------
+# What's the command aliases for this plugin?
+#
+# Main command is "/epicchat".
+# -------------------------------------------------------------------------------------------------
+Aliases:
+  - "chat"
+
+Chat:
+  # -------------------------------------------------------------------------------------------------
+  # Do you want to enable this feature?
+  # -------------------------------------------------------------------------------------------------
+  Enabled: true
+
+  # -------------------------------------------------------------------------------------------------
+  # What's the permission to use the chat?
+  #
+  # Set this to 'none' to disable this feature.
+  # -------------------------------------------------------------------------------------------------
+  Permission: "none"
+
+  # -------------------------------------------------------------------------------------------------
+  # What's the permission to use the colors in the chat?
+  #
+  # Set this to 'none' to disable this feature.
+  # -------------------------------------------------------------------------------------------------
+  Permission_Color: "color.use"
+
+  # -------------------------------------------------------------------------------------------------
+  # Do you want to send the chat to the console?
+  # -------------------------------------------------------------------------------------------------
+  Log_Enabled: true
+
+  # -------------------------------------------------------------------------------------------------
+  # What's the default chat format?
+  # -------------------------------------------------------------------------------------------------
+  Format: "{epicchatpro_tag} &a▫ &7{player_prefix}&f{player_name} &8» {message}"
+
+  # -------------------------------------------------------------------------------------------------
+  # Color used in {message} placeholder in the "Format".
+  # -------------------------------------------------------------------------------------------------
+  Message_Color: "&7"
+
+  # -------------------------------------------------------------------------------------------------
+  # What's the chat format for specified group?
+  #
+  # Example Usage:
+  # Group_Format:
+  #  - Name: "owner"
+  #    Format: "{player_prefix}&f{player_name} &8• {message}"
+  #    Message_Color: "&c"
+  #  - Name: "admin"
+  #    Format: "&2Admin &7{player_name} &8> {message}"
+  #    Message_Color: "&a"
+  #
+  # For this feature Vault & Permission plugin (for example LuckPerms) need to be installed.
+  # -------------------------------------------------------------------------------------------------
+  Group_Format:
+    - Name: "owner"
+      Format: "&4Owner &f{player_name} &8• {message}"
+      Message_Color: "&c"
+    - Name: "admin"
+      Format: "{player_prefix}#F4F734{player_name} &8• {message}"
+      Message_Color: "#E2E2E2"
+
+  # -------------------------------------------------------------------------------------------------
+  # What's the shown message when player hovers on the chat format?
+  #
+  # Set this to "Hover: []" to disable it.
+  # -------------------------------------------------------------------------------------------------
+  Hover:
+    - "&a▫ &f{player_name}'s &7Profile"
+    - " "
+    - " &4* &7First Join &c{player_first_join_date} &f유"
+    - " &4* &7Play Time &c{statistic_time_played:days}d {statistic_time_played:hours}h {statistic_time_played:minutes}m &f⌛"
+    - " "
+    - " &e&nClick to send a message to this player&r"
+    - " "
+    - "&8▫ Message was sent on {timestamp_short}"
+
+  # -------------------------------------------------------------------------------------------------
+  # What's the suggested message, when player clicks to the chat format?
+  #
+  # Set this to "Hover_Click_Command: []" to disable it.
+  # -------------------------------------------------------------------------------------------------
+  Hover_Click_Command: "/msg {target_name} "
+
+  Announcement:
+    # -------------------------------------------------------------------------------------------------
+    # Do you want to enable this feature?
+    # -------------------------------------------------------------------------------------------------
+    Enabled: true
+
+    # -------------------------------------------------------------------------------------------------
+    # What's the repeat time to send the random announcement?
+    # -------------------------------------------------------------------------------------------------
+    Repeat_Every: "15 minutes"
+
+    # -------------------------------------------------------------------------------------------------
+    # Do you want to send the announcements in the order (false) or randomly (true)?
+    # -------------------------------------------------------------------------------------------------
+    Random_Order: true
+
+    Announcements:
+      - Sound: CAT_HISS
+        Permission: "none"
+        Chat_Message:
+          - " "
+          - "<center>&a▫ &2&lANNOUNCEMENT"
+          - " "
+          - "<center>&7This is the example announcement"
+          - "<center>&7that you can send to your players."
+          - " "
+          - "<center>&cYou can toggle Random Order for announcements."
+          - " "
+          - "<center>&f* You can set Sound for it."
+          - "<center>&f* You can set Permission for it."
+          - " "
+      - Permission: "chat.announcement"
+        Chat_Message:
+          - " "
+          - "&e▫ &6&lANNOUNCEMENT"
+          - " "
+          - "&7This is the example announcement"
+          - "&7that you can send to your players."
+          - " "
+          - "&cPlayer is required to have the permission to see it."
+          - " "
+
+  # -------------------------------------------------------------------------------------------------
+  # You can specify broadcasts (how many you want) and
+  # later you can send them to the game with a command.
+  # -------------------------------------------------------------------------------------------------
+  Broadcast:
+    # -------------------------------------------------------------------------------------------------
+    # Do you want to enable this feature?
+    # -------------------------------------------------------------------------------------------------
+    Enabled: true
+
+    Broadcasts:
+      - Name: "test"
+        Message: "{chat}&2This is a test broadcast message.|Supports multi-line too!"
+      - Name: "actionbar"
+        Message: "{actionbar}Broadcast sent to the actionbar!"
+
+  Cooldown:
+    # -------------------------------------------------------------------------------------------------
+    # Do you want to enable this feature?
+    # -------------------------------------------------------------------------------------------------
+    Enabled: true
+
+    # -------------------------------------------------------------------------------------------------
+    # What's the permission to bypass cooldown?
+    #
+    # Set this to 'none' to disable it.
+    # -------------------------------------------------------------------------------------------------
+    Bypass_Permission: "cooldown.chat.bypass"
+
+    # -------------------------------------------------------------------------------------------------
+    # What's the message when someone spams?
+    #
+    # Placeholders:
+    # > {time} - shows time left
+    # > {time_plural} - shows time left + second/seconds (you can edit the plurals in localization)
+    # -------------------------------------------------------------------------------------------------
+    Message: "{actionbar}{prefix} You can write again in &f{time_plural}&7."
+
+    # -------------------------------------------------------------------------------------------------
+    # What's the time in seconds that player can write again?
+    # -------------------------------------------------------------------------------------------------
+    Delay_Seconds: 3
+
+  Command_Cooldown:
+    # -------------------------------------------------------------------------------------------------
+    # Do you want to enable this feature?
+    # -------------------------------------------------------------------------------------------------
+    Enabled: true
+
+    # -------------------------------------------------------------------------------------------------
+    # What's the permission to bypass command cooldown?
+    #
+    # Set this to 'none' to disable it.
+    # -------------------------------------------------------------------------------------------------
+    Bypass_Permission: "cooldown.command.bypass"
+
+    # -------------------------------------------------------------------------------------------------
+    # What's the message when someone spams?
+    #
+    # Placeholders:
+    # > {time} - shows time left
+    # > {time_plural} - shows time left + second/seconds (you can edit the plurals in localization)
+    # -------------------------------------------------------------------------------------------------
+    Message: "{actionbar}{prefix} Ugh.. You can't use commands that fast, wait &f{time_plural}&7."
+
+    # -------------------------------------------------------------------------------------------------
+    # What's the time in seconds that player can write again?
+    # -------------------------------------------------------------------------------------------------
+    Delay_Seconds: 3
+
+  # -------------------------------------------------------------------------------------------------
+  # You can setup own Discord bot, if you wish. This feature only works on Minecraft version 1.15+.
+  #
+  # How to do it? See https://github.com/AdoNikeOFFICE/EpicChatPRO/wiki/Discord
+  #
+  # If you are using DiscordSRV, leave Enabled to: Enabled: false
+  # and configure the Discord_Format in this section.
+  # -------------------------------------------------------------------------------------------------
+  Discord:
+    # -------------------------------------------------------------------------------------------------
+    # Do you want to enable this feature?
+    # -------------------------------------------------------------------------------------------------
+    Enabled: false
+
+    # -------------------------------------------------------------------------------------------------
+    # Do you want to send the discord message sent to Minecraft chat to the console?
+    # -------------------------------------------------------------------------------------------------
+    Log_Enabled: true
+
+    # -------------------------------------------------------------------------------------------------
+    # The Discord bot Token.
+    # -------------------------------------------------------------------------------------------------
+    Token: "BOT_TOKEN"
+
+    # -------------------------------------------------------------------------------------------------
+    # The Discord bot Activity.
+    # -------------------------------------------------------------------------------------------------
+    Activity:
+      # -------------------------------------------------------------------------------------------------
+      # Available types:
+      # > PLAYING
+      # > LISTENING
+      # > WATCHING
+      # > COMPETING
+      # -------------------------------------------------------------------------------------------------
+      Type: "PLAYING"
+
+      # -------------------------------------------------------------------------------------------------
+      # Available placeholders:
+      # > {online}
+      # > {max}
+      # > {tps}
+      # > {server_name}
+      # > {timestamp_short}
+      # -------------------------------------------------------------------------------------------------
+      Message: "play.server.net ({online}/{max})"
+
+      # -------------------------------------------------------------------------------------------------
+      # What's the repeat time to update the Activity placeholders?
+      # -------------------------------------------------------------------------------------------------
+      Repeat_Every: "1 minute"
+
+    # -------------------------------------------------------------------------------------------------
+    # What's the ID of the Discord channel, where chat message will be sent?
+    #
+    # From the Discord to the Minecraft
+    # &
+    # From the Minecraft to the Discord
+    # -------------------------------------------------------------------------------------------------
+    Chat_Channel_ID: "000000000000000000"
+
+    # -------------------------------------------------------------------------------------------------
+    # What's the message sent to Minecraft chat?
+    # -------------------------------------------------------------------------------------------------
+    Chat_Format: "{chat}&b▫ &9Discord &8| &f{member_mention} &8» &f{message}"
+
+    # -------------------------------------------------------------------------------------------------
+    # What's the message sent to Discord channel?
+    # -------------------------------------------------------------------------------------------------
+    Discord_Format: "▫ Minecraft | {player_prefix}{player_name} » {message}"
+
+  # -------------------------------------------------------------------------------------------------
+  # What's the emojis, that can be replaced in the chat?
+  #
+  # Set this to "Emojis: []" to disable it.
+  # -------------------------------------------------------------------------------------------------
+  Emoji:
+    # -------------------------------------------------------------------------------------------------
+    # Do you want to enable this feature?
+    # -------------------------------------------------------------------------------------------------
+    Enabled: true
+
+    # -------------------------------------------------------------------------------------------------
+    # What's the permission to use the emojis?
+    #
+    # Set this to 'none' to disable this feature.
+    # -------------------------------------------------------------------------------------------------
+    Permission: "none"
+
+    # -------------------------------------------------------------------------------------------------
+    # What's the color of emoji in the chat message?
+    # -------------------------------------------------------------------------------------------------
+    Color: "&e"
+
+    Emojis:
+      ":)": "☺"
+      "=)": "☻"
+      ":yes:": "☑"
+      ":no:": "⊠"
+      "o/": "(づ｡◕‿‿◕｡)づ"
+      "<3": "❤"
+      ":star:": "⭐"
+      ":arrow:": "➜"
+      ":rage:": "(╯°□°）╯︵ ┻━┻"
+      "YOUR_OWN_EMOJI": "EMOJI"
+
+  Filter:
+    # -------------------------------------------------------------------------------------------------
+    # Do you want to enable this feature?
+    # -------------------------------------------------------------------------------------------------
+    Enabled: true
+
+    # -------------------------------------------------------------------------------------------------
+    # What's the permission to bypass filters?
+    #
+    # Set this to 'none' to disable this feature.
+    # -------------------------------------------------------------------------------------------------
+    Bypass_Permission: "filter.bypass"
+
+    Filters:
+      Anti_IP: '\b[0-9]{1,3}(\.|dot|\(dot\)|-|;|:|,|(\W|\d|_)*\s)+[0-9]{1,3}(\.|dot|\(dot\)|-|;|:|,|(\W|\d|_)*\s)+[0-9]{1,3}(\.|dot|\(dot\)|-|;|:|,|(\W|\d|_)*\s)+[0-9]{1,3}\b'
+      Anti_URL: '[a-zA-Z0-9\-\.]+\s?(\.|dot|\(dot\)|-|;|:|,)\s?(com|org|net|cz|co|uk|sk|biz|mobi|xxx|eu|me|io|tk|xyz|online|store)\b'
+      Anti_Bitch: '\bb(i|!)tch'
+      Anti_Asshole: '\bass\b|\basshole'
+      Anti_Fuck: '\b(f+(\W|\d|_)*u+(\W|\d|_)*c+(\W|\d|_)*k+(\W|\d|_)*)'
+      Anti_Kokot: '\b(k+(\W|\d|_)*o+(\W|\d|_)*k+(\W|\d|_)*o+(\W|\d|_)*t+(\W|\d|_)*)'
+      YOUR_OWN_FILTER: 'REGEX'
+
+  Helper:
+    # -------------------------------------------------------------------------------------------------
+    # Do you want to enable this feature?
+    # -------------------------------------------------------------------------------------------------
+    Enabled: true
+
+    Helpers:
+      - Message_Contains:
+          - "discord"
+          - "dc"
+        Send: "Join our community &cdiscord-link&7."
+
+  Mention:
+    # -------------------------------------------------------------------------------------------------
+    # Do you want to enable this feature?
+    # -------------------------------------------------------------------------------------------------
+    Enabled: true
+
+    # -------------------------------------------------------------------------------------------------
+    # What's the message when player mentions someone?
+    # -------------------------------------------------------------------------------------------------
+    Message: "{title}&a{target_name}|&7Mentioned you!"
+
+    # -------------------------------------------------------------------------------------------------
+    # What's the color "format" of mentioned name in the chat message?
+    # -------------------------------------------------------------------------------------------------
+    Color: "&a&o@"
+
+    # -------------------------------------------------------------------------------------------------
+    # What's the sound played to the mentioned player?
+    # -------------------------------------------------------------------------------------------------
+    Sound: LEVEL_UP
+
+  # -------------------------------------------------------------------------------------------------
+  # What's the questions to ask to the players?
+  # -------------------------------------------------------------------------------------------------
+  Question:
+    # -------------------------------------------------------------------------------------------------
+    # Do you want to enable this feature?
+    # -------------------------------------------------------------------------------------------------
+    Enabled: true
+
+    # -------------------------------------------------------------------------------------------------
+    # What's the repeat time to send the question?
+    # -------------------------------------------------------------------------------------------------
+    Repeat_Every: "10 minutes"
+
+    # -------------------------------------------------------------------------------------------------
+    # What's the time to cancel the question, when inactive?
+    # -------------------------------------------------------------------------------------------------
+    Inactive_Cancel: "1 minute"
+
+    # -------------------------------------------------------------------------------------------------
+    # What's the sound played when question is being sent?
+    # -------------------------------------------------------------------------------------------------
+    Sound: LEVEL_UP
+
+    Questions:
+      - Question: "{actionbar}{prefix} &7[?] &fWhat is the answer to the life, the universe and everything? &7[?]"
+        Answer: "42"
+      - Question: "{chat}<center>Multi-line message here|<center>&7[?] &fMake up the word &a'E__c' &7[?]|<center>Created by AdoNikeOFFICE."
+        Answer: "Epic"
+        Sound: SUCCESSFUL_HIT
+
+    Rewards:
+      - "gamemode creative {player}"
+      - "give {player} diamond"
+
+  Staff_Chat:
+    # -------------------------------------------------------------------------------------------------
+    # Do you want to enable this feature?
+    # -------------------------------------------------------------------------------------------------
+    Enabled: true
+
+    # -------------------------------------------------------------------------------------------------
+    # Do you want to send the staff chat to the console?
+    # -------------------------------------------------------------------------------------------------
+    Log_Enabled: true
+
+    Format: "&d▫ &5Staff Chat &8| &f{player_name} &8» &f{message}"
+
+  # -------------------------------------------------------------------------------------------------
+  # Only works for Minecraft version 1.15+.
+  # -------------------------------------------------------------------------------------------------
+  Tab_Complete:
+    # -------------------------------------------------------------------------------------------------
+    # Do you want to enable this feature?
+    # -------------------------------------------------------------------------------------------------
+    Enabled: true
+
+    # -------------------------------------------------------------------------------------------------
+    # Allow to use only specified commands in Completions section in-game,
+    # otherwise Tab_Complete.Message will be sent.
+    # -------------------------------------------------------------------------------------------------
+    Block_Commands_Enabled: true
+
+    # -------------------------------------------------------------------------------------------------
+    # What's the permission to bypass tab completion?
+    #
+    # Set this to 'none' to disable this feature.
+    # -------------------------------------------------------------------------------------------------
+    Bypass_Permission: "tabcomplete.bypass"
+
+    # -------------------------------------------------------------------------------------------------
+    # If player doesn't have permission to specified command, it won't be shown in the tab completion.
+    # -------------------------------------------------------------------------------------------------
+    Completions:
+      - Name: "_EVERYONE_"
+        Allowed_Commands:
+          - "/epicchat"
+      - Name: "default"
+        Allowed_Commands:
+          - "/help"
+          - "/gamemode"
+
+  Tag:
+    # -------------------------------------------------------------------------------------------------
+    # Do you want to enable this feature?
+    # -------------------------------------------------------------------------------------------------
+    Enabled: true
+
+    Tags:
+      - Tag: "&8[&2&lOP&8]"
+        Permission: "none"
+        Menu:
+          Material: BEACON
+      - Tag: "&8[&5&lPRO&8]"
+        Permission: "tags.pro"
+        Menu:
+          Material: IRON_BLOCK
+
+Sub_Commands:
+  # -------------------------------------------------------------------------------------------------
+  # What's the permission to use the subcommands?
+  #
+  # Set this to 'none' to disable it.
+  # -------------------------------------------------------------------------------------------------
+  Permission: "commands.sub"
+
+  Operate:
+    # -------------------------------------------------------------------------------------------------
+    # What's the permission to use the operate command?
+    #
+    # Set this to 'none' to disable it.
+    # -------------------------------------------------------------------------------------------------
+    Permission: "sub.operate"
+
+    # -------------------------------------------------------------------------------------------------
+    # What's the bypass permission? If you have it,
+    # you will be able to use the chat even if it's disabled.
+    #
+    # Set this to 'none' to disable it.
+    # -------------------------------------------------------------------------------------------------
+    Bypass_Permission: "sub.operate.bypass"
+
+  Mute:
+    # -------------------------------------------------------------------------------------------------
+    # What's the permission to use the mute command?
+    #
+    # Set this to 'none' to disable it.
+    # -------------------------------------------------------------------------------------------------
+    Permission: "sub.mute"
+
+    # -------------------------------------------------------------------------------------------------
+    # What's the bypass permission? If you have it,
+    # others won't be able to mute you.
+    #
+    # Set this to 'none' to disable it.
+    # -------------------------------------------------------------------------------------------------
+    Bypass_Permission: "sub.mute.bypass"
+
+  Clear:
+    # -------------------------------------------------------------------------------------------------
+    # What's the permission to use the clear command?
+    #
+    # Set this to 'none' to disable it.
+    # -------------------------------------------------------------------------------------------------
+    Permission: "sub.clear"
+
+  Broadcast:
+    # -------------------------------------------------------------------------------------------------
+    # What's the permission to use the broadcast command?
+    #
+    # Set this to 'none' to disable it.
+    # -------------------------------------------------------------------------------------------------
+    Permission: "sub.broadcast"
+
+  Staff_Chat:
+    # -------------------------------------------------------------------------------------------------
+    # What's the permission to use the staffchat command?
+    #
+    # Set this to 'none' to disable it.
+    # -------------------------------------------------------------------------------------------------
+    Permission: "sub.staffchat"
+
+  Tag:
+    # -------------------------------------------------------------------------------------------------
+    # What's the permission to use the tag command?
+    #
+    # Set this to 'none' to disable it.
+    # -------------------------------------------------------------------------------------------------
+    Permission: "sub.tag"
+
+  Reload:
+    # -------------------------------------------------------------------------------------------------
+    # What's the permission to use the reload command?
+    #
+    # Set this to 'none' to disable it.
+    # -------------------------------------------------------------------------------------------------
+    Permission: "sub.reload"
+
+# -------------------------------------------------------------------------------------------------
+# DO NOT EDIT. Otherwise it will corrupt your plugin installation!
+# -------------------------------------------------------------------------------------------------
+Version: 1

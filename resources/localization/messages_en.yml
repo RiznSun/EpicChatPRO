@@ -1,0 +1,145 @@
+# !-----------------------------------------------------------------------------------------------!
+#
+#   [WIKI]
+#    1) https://github.com/AdoNikeOFFICE/EpicChatPRO/wiki
+#
+#   [BASICS]
+#    1) To hide message, set it to [].
+#    2) For UNICODE CHARACTERS (smileys, symbols, ..), save the file in UTF-8 encoding.
+#    3) Color codes are supported with '&', '§', '{#hex}' or '#hex' (Hex colors are only supported from 1.16+ Minecraft version).
+#    ▪  Examples: "&cHello."; "{#756D0B}Hello".
+#    ▪  For hex colors I recommend using https://htmlcolorcodes.com/.
+#    ▪  For hex colors gradients I recommend using https://rgb.birdflop.com/.
+#
+# !-----------------------------------------------------------------------------------------------!
+
+# -------------------------------------------------------------------------------------------------
+# Commands messages
+# -------------------------------------------------------------------------------------------------
+Commands:
+  No_Console: "&7You need to use this command in-game."
+  Invalid_Argument: "&7Invalid argument. Run &f/{label} &7for help."
+  Reload_Started: "&7Reloading plugin's data, please wait.."
+  Reload_Success: "&f{plugin_name} {plugin_version} &7has been reloaded."
+  Reload_Fail: "&7Reloading failed! See the console for more information. Error: &f{error}&7."
+  
+  Operate:
+    Toggled: "'&7Chat mode has been ' + (disabled ? '&aenabled' : '&cdisabled') + '&7.'" # Broadcast Message
+    Message: "&7While chat is disabled, you can't use it."
+
+  Mute:
+    Toggled: "'&7Mute for &f{0} &7has been ' + (enabled ? '&cdisabled' : '&aenabled') + (timeSet ? ' &7for &f{1}' : '') + '&7.'" # Broadcast Message
+    Muted: "'&7You were muted' + (timeSet ? ' for &f{0}' : '') + '&7.'"
+    Unmuted: "&7You were unmuted!"
+
+  Clear: # Broadcast Messages
+    Message:
+      - "{prefix} &8&m----------------------------------------"
+      - "{prefix}"
+      - "{prefix} &7Chat was cleared by"
+      - "{prefix} &7administrator &f{target_name}"
+      - "{prefix}"
+      - "{prefix} &8&m----------------------------------------"
+    Reason_Message:
+      - "{prefix} &8&m----------------------------------------"
+      - "{prefix}"
+      - "{prefix} &7Chat was cleared by"
+      - "{prefix} &7administrator &f{target_name}"
+      - "{prefix}"
+      - "{prefix} &cReason"
+      - "{prefix} &4{reason}"
+      - "{prefix}"
+      - "{prefix} &8&m----------------------------------------"
+
+  Broadcast:
+    Not_Valid: "&7This message is not found in the settings.yml."
+
+  Staff_Chat:
+    Toggled: "'&7Staff Chat has been ' + (!enabled ? '&aenabled' : '&cdisabled') + '&7.'"
+
+# -------------------------------------------------------------------------------------------------
+# Messages related to players
+# -------------------------------------------------------------------------------------------------
+Player:
+  Not_Online: "&7Player &f{player} &7is not online on this server."
+  Yourself: "'&7You cant ' + (!hasMuteBypass ? '&fuse it on yourself' : '&fmute this player') + '&7.'"
+
+# -------------------------------------------------------------------------------------------------
+# Messages related to filters
+# -------------------------------------------------------------------------------------------------
+Filter:
+  Message: "You can't write swears/ips/urls."
+
+# -------------------------------------------------------------------------------------------------
+# Tab Complete related messages
+# -------------------------------------------------------------------------------------------------
+Tab_Complete:
+  Message: "This command does not exist."
+
+# -------------------------------------------------------------------------------------------------
+# Tag related messages
+# -------------------------------------------------------------------------------------------------
+Tag:
+  Message: "You have opened the menu."
+  Menu:
+    Title: "EpicChatPRO // Tags"
+    Name: "'&f{tag} ' + (picked ? '&8| &aPicked' : '')"
+    Lore:
+      - " "
+      - "&7Click to pick this tag."
+    Animated_Title: "Tag set!"
+    Reset:
+      Name: "Unset the Tag"
+      Animated_Title: "Tag unset!"
+
+# -------------------------------------------------------------------------------------------------
+# Question related messages
+# -------------------------------------------------------------------------------------------------
+Question:
+  Guessed: "&f{0} &7have guessed the answer! &f({1})"
+  Inactive_Cancel: "The question was inactive. Expired, wait for the new one!"
+
+# -------------------------------------------------------------------------------------------------
+# Menu related messages
+# -------------------------------------------------------------------------------------------------
+Menu:
+  Page_Previous: "&8<< &fPage {page}"
+  Page_Next: "Page {page} &8>>"
+  Page_First: "&7First Page"
+  Page_Last: "&7Last Page"
+
+# -------------------------------------------------------------------------------------------------
+# Words for both singular and plural form. Separate these two forms with ", "
+# -------------------------------------------------------------------------------------------------
+Cases:
+  Second: second, seconds
+
+# -------------------------------------------------------------------------------------------------
+# Messages shown when player runs a command he lacks permission for
+# -------------------------------------------------------------------------------------------------
+No_Permission: "You don't have enough permission to use this. &f({permission})"
+
+# -------------------------------------------------------------------------------------------------
+# What's the message, when player is muted?
+#
+# This message is supported with
+# ▪ Essentials,
+# ▪ CMI,
+# ▪ BanManager,
+# ▪ AdvancedBan,
+# ▪ LiteBans
+# -------------------------------------------------------------------------------------------------
+Muted: "You can't use the chat, while you are muted."
+
+# -------------------------------------------------------------------------------------------------
+# What's the message, when player is muted?
+#
+# This message is supported with
+# ▪ AuthMe
+# -------------------------------------------------------------------------------------------------
+Not_Logged: "You can't use the chat, while you are not logged."
+
+# -------------------------------------------------------------------------------------------------
+# DO NOT EDIT. Otherwise it will corrupt your plugin installation!
+# -------------------------------------------------------------------------------------------------
+Version: 1
