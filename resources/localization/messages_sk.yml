@@ -68,28 +68,29 @@ Player:
 # Messages related to filters
 # -------------------------------------------------------------------------------------------------
 Filter:
-  Message: "Nemôžeš písať nadávky/ip/url."
+  Message: "&7Nemôžeš písať nadávky/ip/url."
 
 # -------------------------------------------------------------------------------------------------
 # Tab_Complete messages
 # -------------------------------------------------------------------------------------------------
 Tab_Complete:
-  Message: "Tento príkaz neexistuje."
+  Message: "&7Tento príkaz neexistuje."
 
 # -------------------------------------------------------------------------------------------------
 # Tag related messages
 # -------------------------------------------------------------------------------------------------
 Tag:
-  Message: "Otvoril si Menu."
+  Menu_Message: "&7Otvoril si Menu."
+  Message: "&7Tag nastavený na &f'{0}' &7hráčovi &f{1}&7."
   Menu:
     Title: "EpicChatPRO // Tagy"
-    Name: "'&f{tag} ' + (picked ? '&8| &aZvolený' : '')"
+    Name: "'&f{tagName} ({tag}) ' + (picked ? '&8| &aZvolený' : '')"
     Lore:
       - " "
       - "&7Klikni pre zvolenie tohto tagu."
     Animated_Title: "Tag nastavený!"
     Reset:
-      Name: "Resetuj Tag"
+      Name: "&cResetuj Tag"
       Animated_Title: "Tag resetovaný!"
 
 # -------------------------------------------------------------------------------------------------
@@ -97,14 +98,14 @@ Tag:
 # -------------------------------------------------------------------------------------------------
 Question:
   Guessed: "&f{0} &7uhádol odpoveď! &f({1})"
-  Inactive_Cancel: "Otázka bola neaktívna. Expirovala, počkajte si na ďalšiu!"
+  Inactive_Cancel: "&7Otázka bola neaktívna. Expirovala, počkajte si na ďalšiu!"
 
 # -------------------------------------------------------------------------------------------------
 # Menu related messages
 # -------------------------------------------------------------------------------------------------
 Menu:
   Page_Previous: "&8<< &fStrana {page}"
-  Page_Next: "Strana {page} &8>>"
+  Page_Next: "&fStrana {page} &8>>"
   Page_First: "&7Prvá Strana"
   Page_Last: "&7Posledná Strana"
 
@@ -117,7 +118,7 @@ Cases:
 # -------------------------------------------------------------------------------------------------
 # Messages shown when player runs a command he lacks permission for
 # -------------------------------------------------------------------------------------------------
-No_Permission: "Nemáš dostatok práv na vykonanie tohto príkazu. &f({permission})"
+No_Permission: "&7Nemáš dostatok práv na vykonanie tohto príkazu. &f({permission})"
 
 # -------------------------------------------------------------------------------------------------
 # What's the message, when player is muted?
@@ -129,7 +130,7 @@ No_Permission: "Nemáš dostatok práv na vykonanie tohto príkazu. &f({permissi
 # ▪ AdvancedBan,
 # ▪ LiteBans
 # -------------------------------------------------------------------------------------------------
-Muted: "Nemôžeš používať chat, ak si mutnutý."
+Muted: "&7Nemôžeš používať chat, ak si mutnutý."
 
 # -------------------------------------------------------------------------------------------------
 # What's the message, when player is muted?
@@ -137,7 +138,7 @@ Muted: "Nemôžeš používať chat, ak si mutnutý."
 # This message is supported with
 # ▪ AuthMe
 # -------------------------------------------------------------------------------------------------
-Not_Logged: "Nemôžeš používať chat, ak nie si prihlásený."
+Not_Logged: "&7Nemôžeš používať chat, ak nie si prihlásený."
 
 # -------------------------------------------------------------------------------------------------
 # DO NOT EDIT. Otherwise it will corrupt your plugin installation!

@@ -68,28 +68,29 @@ Player:
 # Messages related to filters
 # -------------------------------------------------------------------------------------------------
 Filter:
-  Message: "You can't write swears/ips/urls."
+  Message: "&7You can't write swears/ips/urls."
 
 # -------------------------------------------------------------------------------------------------
 # Tab Complete related messages
 # -------------------------------------------------------------------------------------------------
 Tab_Complete:
-  Message: "This command does not exist."
+  Message: "&7This command does not exist."
 
 # -------------------------------------------------------------------------------------------------
 # Tag related messages
 # -------------------------------------------------------------------------------------------------
 Tag:
-  Message: "You have opened the menu."
+  Menu_Message: "&7You have opened the menu."
+  Message: "&7Tag set to &f'{0}' &7for Player &f{1}&7."
   Menu:
     Title: "EpicChatPRO // Tags"
-    Name: "'&f{tag} ' + (picked ? '&8| &aPicked' : '')"
+    Name: "'&f{tagName} &7({tag}&7) ' + (picked ? '&8| &aPicked' : '')"
     Lore:
       - " "
       - "&7Click to pick this tag."
     Animated_Title: "Tag set!"
     Reset:
-      Name: "Unset the Tag"
+      Name: "&cUnset the Tag"
       Animated_Title: "Tag unset!"
 
 # -------------------------------------------------------------------------------------------------
@@ -97,14 +98,14 @@ Tag:
 # -------------------------------------------------------------------------------------------------
 Question:
   Guessed: "&f{0} &7have guessed the answer! &f({1})"
-  Inactive_Cancel: "The question was inactive. Expired, wait for the new one!"
+  Inactive_Cancel: "&7The question was inactive. Expired, wait for the new one!"
 
 # -------------------------------------------------------------------------------------------------
 # Menu related messages
 # -------------------------------------------------------------------------------------------------
 Menu:
   Page_Previous: "&8<< &fPage {page}"
-  Page_Next: "Page {page} &8>>"
+  Page_Next: "&fPage {page} &8>>"
   Page_First: "&7First Page"
   Page_Last: "&7Last Page"
 
@@ -117,7 +118,7 @@ Cases:
 # -------------------------------------------------------------------------------------------------
 # Messages shown when player runs a command he lacks permission for
 # -------------------------------------------------------------------------------------------------
-No_Permission: "You don't have enough permission to use this. &f({permission})"
+No_Permission: "&7You don't have enough permission to use this. &f({permission})"
 
 # -------------------------------------------------------------------------------------------------
 # What's the message, when player is muted?
@@ -129,7 +130,7 @@ No_Permission: "You don't have enough permission to use this. &f({permission})"
 # ▪ AdvancedBan,
 # ▪ LiteBans
 # -------------------------------------------------------------------------------------------------
-Muted: "You can't use the chat, while you are muted."
+Muted: "&7You can't use the chat, while you are muted."
 
 # -------------------------------------------------------------------------------------------------
 # What's the message, when player is muted?
@@ -137,7 +138,7 @@ Muted: "You can't use the chat, while you are muted."
 # This message is supported with
 # ▪ AuthMe
 # -------------------------------------------------------------------------------------------------
-Not_Logged: "You can't use the chat, while you are not logged."
+Not_Logged: "&7You can't use the chat, while you are not logged."
 
 # -------------------------------------------------------------------------------------------------
 # DO NOT EDIT. Otherwise it will corrupt your plugin installation!
