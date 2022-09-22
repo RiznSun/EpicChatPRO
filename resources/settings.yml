@@ -375,7 +375,12 @@ Chat:
       - Message_Contains:
           - "discord"
           - "dc"
+          - "community"
         Send: "Join our community &cdiscord-link&7."
+      - Message_Contains: "help"
+        Send:
+          - "Do you need a help?"
+          - "Join our discord and create a ticket."
 
   Mention:
     # -------------------------------------------------------------------------------------------------
@@ -493,7 +498,10 @@ Chat:
       Size: "9 * 3"
 
       # -------------------------------------------------------------------------------------------------
-      # What are the slots where Tags will be displayed?
+      # What are the slots where Tags will be displayed? (on each page)
+      #
+      # If Displayed_Slots: [] - tags will be displayed manually
+      # from the start of the Menu.
       # -------------------------------------------------------------------------------------------------
       Displayed_Slots: [ 10, 11, 12, 13, 14, 15, 16 ]
 
