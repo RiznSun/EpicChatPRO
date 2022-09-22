@@ -240,12 +240,17 @@ Chat:
   # -------------------------------------------------------------------------------------------------
   # You can setup own Discord bot, if you wish. This feature only works on Minecraft version 1.15+.
   #
-  # How to do it? See https://github.com/AdoNikeOFFICE/EpicChatPRO/wiki/Discord
-  #
-  # If you are using DiscordSRV, leave Enabled to: Enabled: false
-  # and configure the Discord_Format in this section.
+  # See https://github.com/AdoNikeOFFICE/EpicChatPRO/wiki/Discord.
   # -------------------------------------------------------------------------------------------------
   Discord:
+    # -------------------------------------------------------------------------------------------------
+    # FILL THIS ONLY IF YOU USE DISCORDSRV PLUGIN, SO EPICCHAT CAN SEND THE CHAT MESSAGE TO THE SPECIFIED CHANNEL ID, OTHERWISE IGNORE IT
+    # Discord_Format from there will be sent to the Discord instead of DiscordSRV message.
+    #
+    # https://github.com/AdoNikeOFFICE/EpicChatPRO/wiki/Discord#DiscordSRV
+    # -------------------------------------------------------------------------------------------------
+    DiscordSRV_Channel_ID: "000000000000000000"
+
     # -------------------------------------------------------------------------------------------------
     # Do you want to enable this feature?
     # -------------------------------------------------------------------------------------------------
