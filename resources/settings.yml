@@ -36,7 +36,7 @@ Locale: "en"
 # This is the Debug section, if you don't want to see specified notify messages,
 # you can set the Debug to: Debug: [], or remove specified notify message.
 # -------------------------------------------------------------------------------------------------
-Debug: [ "placeholderapi", "vault", "message-types" ]
+Debug: [ "placeholderapi", "vault", "message-types", "tag" ]
 
 # -------------------------------------------------------------------------------------------------
 # What's the command aliases for this plugin?
