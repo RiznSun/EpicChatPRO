@@ -20,7 +20,7 @@ Commands:
   No_Console: "&7You need to use this command in-game."
   Invalid_Argument: "&7Invalid argument. Run &f/{label} &7for help."
   Reload_Started: "&7Reloading plugin's data, please wait.."
-  Reload_Success: "&f{plugin_name} {plugin_version} &7has been reloaded."
+  Reload_Success: "&fEpicChatPRO {plugin_version} &7has been reloaded."
   Reload_Fail: "&7Reloading failed! See the console for more information. Error: &f{error}&7."
   
   Operate:
