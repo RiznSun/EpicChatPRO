@@ -84,24 +84,31 @@ Chat:
   # -------------------------------------------------------------------------------------------------
   # What's the chat format for specified group?
   #
-  # Example Usage:
-  # Group_Format:
-  #  - Name: "owner"
-  #    Format: "{player_prefix}&f{player_name} &8• {message}"
-  #    Message_Color: "&c"
-  #  - Name: "admin"
-  #    Format: "&2Admin &7{player_name} &8> {message}"
-  #    Message_Color: "&a"
-  #
   # For this feature Vault & Permission plugin (for example LuckPerms) need to be installed.
   # -------------------------------------------------------------------------------------------------
   Group_Format:
     - Name: "owner"
       Format: "&4Owner &f{player_name} &8• {message}"
       Message_Color: "&c"
+      Hover:
+        - "&7Do you need help? I am here for you!"
+        - "&7Don't hesitate to message me."
+        - " "
+        - " &e&nClick to send a message to this player&r"
+        - " "
+        - "&8▫ Message was sent on {timestamp_short}"
     - Name: "admin"
       Format: "{player_prefix}#F4F734{player_name} &8• {message}"
       Message_Color: "#E2E2E2"
+      Hover:
+        - "{player_prefix} {player_name}'s Profile"
+        - ""
+        - "&7If you need help, create a ticket"
+        - "&7and ping me &fAdoNikeOFFICE#0001"
+        - " "
+        - " &a&nClick to send a message to this player&r"
+        - " "
+        - "&8▫ Message was sent on {timestamp_short}"
 
   # -------------------------------------------------------------------------------------------------
   # What's the shown message when player hovers on the chat format?
@@ -550,7 +557,7 @@ Sub_Commands:
     # -------------------------------------------------------------------------------------------------
     # Do you want to enable this subcommand?
     # -------------------------------------------------------------------------------------------------
-    Enabled: false
+    Enabled: true
 
     # -------------------------------------------------------------------------------------------------
     # What's the permission to use the mute command?
