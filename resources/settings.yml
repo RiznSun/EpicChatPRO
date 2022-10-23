@@ -388,7 +388,7 @@ Chat:
           - "discord"
           - "dc"
           - "community"
-        Send: "Join our community &cdiscord-link&7."
+        Send: "{prefix} Join our community &cdiscord-link&7."
       - Message_Contains: "help"
         Send:
           - "Do you need a help?"
