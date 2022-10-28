@@ -1,7 +1,6 @@
-![Header](https://user-images.githubusercontent.com/65062119/189495513-bed67ec9-1d01-448d-8d74-b9aa54655956.png)
+![Bez_nazvu-1](https://user-images.githubusercontent.com/65062119/198561453-682589ff-152b-4761-af1d-ddb082f60e7f.png)
+![Frame 1](https://user-images.githubusercontent.com/65062119/198561491-1adde69b-865c-47aa-8038-18ec9d9cf4f7.png)
 
-<div align="center">
-  <a href="https://builtbybit.com/resources/epicchatpro-chat-management-solution.25086/"><img src="https://user-images.githubusercontent.com/65062119/187359585-621c5637-6e39-4052-8451-d790f19006bf.png"></img></a>
-</div>
-
-![Reviews Section](https://user-images.githubusercontent.com/65062119/189495522-8904bc7f-647d-44be-a571-d05b504edc40.png)
+Click to see this resource
+[BuiltByBit (Formerly Mc-Market)](https://builtbybit.com/resources/epicchatpro-chat-management-plugin.25086/)
+[SpigotMC](https://www.spigotmc.org/resources/%E2%9C%A8-epicchatpro-chat-management-plugin.105502/)
