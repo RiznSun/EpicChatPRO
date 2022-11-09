@@ -389,10 +389,12 @@ Chat:
           - "dc"
           - "community"
         Send: "{prefix} Join our community &cdiscord-link&7."
+        Global: true
       - Message_Contains: "help"
         Send:
           - "Do you need a help?"
           - "Join our discord and create a ticket."
+        Global: false
 
   Mention:
     # -------------------------------------------------------------------------------------------------
